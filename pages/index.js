@@ -59,7 +59,6 @@ export default function Home({ home }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Main> */}
       <About description={home.About.description} />
 
       <Technologies>
@@ -80,7 +79,6 @@ export default function Home({ home }) {
           })}
         </StackContainer>
       </Technologies>
-      {/* </Main> */}
     </Container>
   );
 }
