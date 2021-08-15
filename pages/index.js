@@ -14,7 +14,7 @@ const Logo = styled.span`
 
 const Technologies = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -42,6 +42,14 @@ const Technologies = styled.div`
   }
 `;
 
+const StackContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+`;
+
 export default function Home({ home }) {
   return (
     <Container>
@@ -56,34 +64,36 @@ export default function Home({ home }) {
 
       <Technologies>
         <p>These are some of the technologies I enjoy working with.</p>
-        {home.Body.Stack.map((item) => {
-          return (
-            <Logo key={item.id}>
-              <Image
-                src={item.image.url}
-                alt="An SVG of React.js"
-                height={52}
-                width={52}
-                key={item.id}
-              />
-            </Logo>
-          );
-        })}
+        <StackContainer>
+          {home.Body.Stack.map((item) => {
+            return (
+              <Logo key={item.id}>
+                <Image
+                  src={item.image.url}
+                  alt="An SVG of React.js"
+                  height={52}
+                  width={52}
+                  key={item.id}
+                />
+              </Logo>
+            );
+          })}
+        </StackContainer>
       </Technologies>
       {/* </Main> */}
     </Container>
   );
 }
 
-export async function getStaticProps(ctx) {
-  const { data } = await client.query({
-    query: HOME,
-  });
+// export async function getStaticProps(ctx) {
+//   const { data } = await client.query({
+//     query: HOME,
+//   });
 
-  return {
-    props: {
-      home: data.homepage,
-    },
-    revalidate: 1,
-  };
-}
+//   return {
+//     props: {
+//       home: data.homepage,
+//     },
+//     revalidate: 1,
+//   };
+// }

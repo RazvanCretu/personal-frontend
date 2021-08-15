@@ -25,15 +25,19 @@ const Description = styled.p`
   padding: 0 0.5rem;
 `;
 
+const AboutContainer = styled.div`
+  padding-top: 4rem;
+`;
+
 const About = ({ description }) => {
   return (
-    <div>
+    <AboutContainer>
       <Title>
         Welcome to my personal website built with{" "}
         <a href="https://nextjs.org">Next.js!</a>
       </Title>
       <Description>{description}</Description>
-    </div>
+    </AboutContainer>
   );
 };
 

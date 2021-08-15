@@ -10,6 +10,7 @@ const Navigation = styled.nav`
   align-items: center;
   justify-content: center;
   z-index: 100;
+  padding-top: 1rem;
 
   a {
     margin-left: 1rem;
@@ -21,6 +22,10 @@ const Navigation = styled.nav`
     color: #0070f3;
     text-decoration: none;
     text-decoration: underline;
+  }
+
+  @media (max-width: 375px) {
+    bottom: 0;
   }
 `;
 
