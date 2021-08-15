@@ -27,6 +27,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 375px) {
     bottom: 0;
+    padding-bottom: 1rem;
   }
 `;
 
