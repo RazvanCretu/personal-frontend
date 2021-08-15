@@ -11,6 +11,7 @@ const Navigation = styled.nav`
   justify-content: center;
   z-index: 100;
   padding-top: 1rem;
+  left: 0;
 
   a {
     margin-left: 1rem;
