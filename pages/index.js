@@ -85,15 +85,15 @@ export default function Home({ home }) {
   );
 }
 
-// export async function getStaticProps(ctx) {
-//   const { data } = await client.query({
-//     query: HOME,
-//   });
+export async function getStaticProps(ctx) {
+  const { data } = await client.query({
+    query: HOME,
+  });
 
-//   return {
-//     props: {
-//       home: data.homepage,
-//     },
-//     revalidate: 1,
-//   };
-// }
+  return {
+    props: {
+      home: data.homepage,
+    },
+    revalidate: 1,
+  };
+}
