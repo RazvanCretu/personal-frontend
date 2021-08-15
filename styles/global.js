@@ -16,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
   }
 
   a {
@@ -27,4 +26,5 @@ export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
 `;
