@@ -12,10 +12,18 @@ export const Container = styled.div`
   padding-top: 4rem;
   top: 0;
   left: 0;
+  transition: 0.5s;
 
   @media ${device.tablet} {
-    padding-top:2rem;
-    padding-bottom:3rem;
+    padding: 2rem 1rem 3rem 1rem;
+
+    && p {
+      font-size: 1.2rem;
+    }
+
+    && h1 {
+      font-size: 3rem;
+    }
   }
 }
 `;

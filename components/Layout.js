@@ -62,7 +62,7 @@ const StyledInput = styled.input`
     left: 3px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   &[type="checkbox"]:active:before {
