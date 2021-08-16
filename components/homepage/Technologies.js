@@ -7,7 +7,7 @@ const Logo = styled.span`
   background-color: ${({ theme }) => theme.stackCircle};
 `;
 
-const Technologies = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -37,19 +37,19 @@ const Technologies = styled.div`
   }
 `;
 
-const StackContainer = styled.div`
+const Technologies = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
+  width: 100%;
 `;
 
 const Stack = ({ techs }) => {
   return (
-    <Technologies>
+    <Container>
       <p>These are some of the technologies I enjoy working with.</p>
-      <StackContainer>
+      <Technologies>
         {techs.map((item) => {
           return (
             <Logo key={item.id}>
@@ -63,8 +63,8 @@ const Stack = ({ techs }) => {
             </Logo>
           );
         })}
-      </StackContainer>
-    </Technologies>
+      </Technologies>
+    </Container>
   );
 };
 
