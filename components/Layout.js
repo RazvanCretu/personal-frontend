@@ -41,7 +41,7 @@ const StyledInput = styled.input`
   &[type="checkbox"] {
     position: relative;
     width: 50px;
-    height: 30px;
+    height: 25px;
     appearance: none;
     background: #c6c6c6;
     outline: none;
@@ -56,11 +56,11 @@ const StyledInput = styled.input`
     justify-content: center;
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    top: 0;
-    left: 0;
+    width: 21px;
+    height: 19px;
+    border-radius: 21px;
+    top: 3px;
+    left: 4px;
     background: #fff;
     transform: scale(1.1);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -72,7 +72,7 @@ const StyledInput = styled.input`
   }
 
   &:checked[type="checkbox"]:before {
-    left: 20px;
+    left: 25px;
   }
 `;
 
