@@ -3,7 +3,7 @@ import Image from "next/image";
 import client from "../apollo";
 import HOME from "../queries/homepage";
 import styled from "styled-components";
-import { Container, Footer } from "../components/homepage/General";
+import { Container } from "../components/homepage/General";
 import About from "../components/homepage/About";
 
 const Logo = styled.span`

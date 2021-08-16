@@ -1,7 +1,6 @@
-import Toggle from "../components/themeToggle";
 import Link from "next/link";
 import styled from "styled-components";
-import { lightTheme } from "../styles/theme";
+import { device } from "../styles/theme";
 
 const Navigation = styled.nav`
   width: 100%;
@@ -26,7 +25,7 @@ const Navigation = styled.nav`
     text-decoration: underline;
   }
 
-  @media (max-width: 450px) {
+  @media ${device.tablet} {
     bottom: 0;
     padding-bottom: 1rem;
   }

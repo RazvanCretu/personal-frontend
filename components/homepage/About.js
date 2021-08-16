@@ -26,7 +26,7 @@ const Description = styled.p`
 `;
 
 const AboutContainer = styled.div`
-  padding-top: 4rem;
+  // padding-top: 4rem;
 `;
 
 const About = ({ description }) => {
