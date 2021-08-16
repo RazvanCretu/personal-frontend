@@ -67,6 +67,7 @@ const StyledInput = styled.input`
 
   &[type="checkbox"]:active:before {
     width: 28px;
+    transition: 0.15s;
   }
 
   &:checked[type="checkbox"] {
