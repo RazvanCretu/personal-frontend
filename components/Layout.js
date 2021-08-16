@@ -57,14 +57,17 @@ const StyledInput = styled.input`
     content: "";
     position: absolute;
     width: 21px;
-    height: 19px;
-    border-radius: 21px;
-    top: 3px;
-    left: 4px;
+    height: 21px;
+    border-radius: 50%;
+    top: 2px;
+    left: 3px;
     background: #fff;
-    transform: scale(1.1);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
+  }
+
+  &[type="checkbox"]:active:before {
+    width: 28px;
   }
 
   &:checked[type="checkbox"] {
@@ -72,7 +75,8 @@ const StyledInput = styled.input`
   }
 
   &:checked[type="checkbox"]:before {
-    left: 25px;
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
   }
 `;
 
