@@ -5,6 +5,7 @@ const Title = styled.h1`
   line-height: 1;
   font-size: 3.5rem;
   text-align: center;
+  color: ${({ theme }) => theme.About.headline};
 
   a {
     color: #0070f3;
@@ -20,22 +21,20 @@ const Title = styled.h1`
 
 const Description = styled.p`
   line-height: 1.5;
-  font-size: 1.5rem;
   text-align: center;
   padding: 0 0.5rem;
+  color: ${({ theme }) => theme.About.paragraph};
 `;
 
 const Container = styled.div`
   // padding-top: 4rem;
+  padding-top: 2rem;
 `;
 
 const About = ({ description }) => {
   return (
     <Container>
-      <Title>
-        Welcome to my personal website built with{" "}
-        <a href="https://nextjs.org">Next.js!</a>
-      </Title>
+      <Title>Welcome to my personal website.</Title>
       <Description>{description}</Description>
     </Container>
   );

@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-const Logo = styled.span`
-  height: 1em;
-  margin-left: 0.5rem;
-  background-color: ${({ theme }) => theme.stackCircle};
-`;
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,26 +8,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-top: 2rem;
 
   p {
     padding: 0 0.5rem;
     line-height: 1.5;
-    font-size: 1.5rem;
     text-align: center;
-  }
-
-  ${Logo} {
-    height: 100px;
-    width: 100px;
-    margin: 1rem;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      box-shadow: 0px 0px 5px aliceblue;
-    }
   }
 `;
 
@@ -45,22 +25,58 @@ const Technologies = styled.div`
   width: 100%;
 `;
 
+const Circle = styled.div`
+  background-color: ${({ theme }) => theme.stackCircle};
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  border-radius: 50%;
+
+  &:hover {
+    box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 0.3);
+
+    span {
+      height: 56px;
+      width: 56px;
+    }
+  }
+`;
+
+const ImageContainer = styled.span`
+  position: relative;
+  height: 42px;
+  width: 42px;
+`;
+
+const StyledImage = styled(Image)`
+  div {
+    position: relative;
+    width: 52px;
+    height: 52px;
+  }
+`;
+
 const Stack = ({ techs }) => {
   return (
     <Container>
+      <h2>Technologies</h2>
       <p>These are some of the technologies I enjoy working with.</p>
       <Technologies>
         {techs.map((item) => {
           return (
-            <Logo key={item.id}>
-              <Image
-                src={item.image.url}
-                alt="An SVG of React.js"
-                height={52}
-                width={52}
-                key={item.id}
-              />
-            </Logo>
+            <Circle key={item.id}>
+              <ImageContainer>
+                <StyledImage
+                  src={item.image.url}
+                  layout="fill"
+                  alt="An SVG of React.js"
+                  key={item.id}
+                />
+              </ImageContainer>
+            </Circle>
           );
         })}
       </Technologies>

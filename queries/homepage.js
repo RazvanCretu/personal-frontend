@@ -3,6 +3,9 @@ import { gql } from "@apollo/client";
 const HOME = gql`
   query Homepage {
     homepage {
+      cv {
+        url
+      }
       About {
         firstName
         lastName

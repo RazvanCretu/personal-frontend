@@ -1,14 +1,40 @@
 export const lightTheme = {
-  body: "#FFF",
-  text: "#363537",
+  Global: {
+    body: "#FFF",
+    text: "#363537",
+  },
+  About: {
+    headline: "#272343",
+    paragraph: "#2d334a",
+  },
+  Jobs: {
+    cardHeading: "#272343",
+    cardParagraph: "#2d334a",
+    cardBackground: "#e3f6f5",
+  },
   toggleBorder: "#FFF",
   background: "#363537",
   stackCircle: "#d4d4d4",
   technologies: "#aaaaaa",
 };
 export const darkTheme = {
-  body: "#363537",
-  text: "#FAFAFA",
+  Global: {
+    body: "#0f0e17",
+    text: "#EBEAF2",
+  },
+  About: {
+    headline: "#fffffe",
+    paragraph: "#EBEAF2",
+  },
+  Jobs: {
+    cardHeading: "#fffffe",
+    cardParagraph: "#EBEAF2",
+    cardBackground: "#464455",
+  },
+  body: "#232946",
+  text: "#b8c1ec",
+  button: "#eebbc3",
+  buttonText: "#232946",
   toggleBorder: "#6B8096",
   background: "#999",
   stackCircle: "#605e61",

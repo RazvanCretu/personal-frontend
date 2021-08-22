@@ -5,14 +5,14 @@ export const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: sans-serif,Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
   }
 
   body {
     align-items: center;
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.Global.body};
+    color: ${({ theme }) => theme.Global.text};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    transition: 0.5s;
   }
 
 `;

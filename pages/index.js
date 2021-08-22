@@ -6,6 +6,7 @@ import About from "../components/homepage/About";
 import Stack from "../components/homepage/Technologies";
 import Jobs from "../components/homepage/Jobs";
 import { device } from "../styles/theme";
+import { saveAs } from "file-saver";
 
 const Container = styled.div`
   width: 100%;
@@ -19,6 +20,10 @@ const Container = styled.div`
   top: 0;
   left: 0;
   transition: 0.5s;
+
+  p {
+    font-size: 1.3rem;
+  }
 
   @media ${device.tablet} {
     padding: 2rem 1rem 3rem 1rem;
@@ -46,6 +51,7 @@ export default function Home({ home }) {
       <About description={home.About.description} />
       <Stack techs={home.Body.Stack} />
       <Jobs jobList={home.Body.Job} />
+      <div></div>
     </Container>
   );
 }
