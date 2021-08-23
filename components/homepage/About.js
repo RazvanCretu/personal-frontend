@@ -33,7 +33,7 @@ const Container = styled.div`
 
 const About = ({ description }) => {
   return (
-    <Container>
+    <Container id="about">
       <Title>Welcome to my personal website.</Title>
       <Description>{description}</Description>
     </Container>

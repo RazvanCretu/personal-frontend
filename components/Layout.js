@@ -51,9 +51,9 @@ const Layout = ({ children, theme, toggleTheme }) => {
           onChange={toggleTheme}
           checked={theme !== "light"}
         />
-        <Link href="/projects">Projects</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Conact</Link>
+        <Link href="#projects">Projects</Link>
+        <Link href="#about">About</Link>
+        <Link href="#contact">Conact</Link>
       </Navigation>
 
       {children}
