@@ -6,7 +6,6 @@ import About from "../components/homepage/About";
 import Stack from "../components/homepage/Technologies";
 import Jobs from "../components/homepage/Jobs";
 import { device } from "../styles/theme";
-import { saveAs } from "file-saver";
 
 const Container = styled.div`
   width: 100%;
