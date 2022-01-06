@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+import { IconContext } from "react-icons";
+import { DiNodejsSmall, DiPython, DiReact, DiRust } from "react-icons/di";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,23 +28,20 @@ const Technologies = styled.div`
   width: 100%;
 `;
 
-const Circle = styled.div`
+const Circle = styled.span`
   background-color: ${({ theme }) => theme.stackCircle};
-  height: 6.5rem;
-  width: 6.5rem;
+  height: 4rem;
+  width: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  padding: 0.5rem;
   border-radius: 50%;
 
   &:hover {
     box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 0.3);
-
-    span {
-      height: 56px;
-      width: 56px;
-    }
+    height: 6rem;
+    width: 6rem;
   }
 `;
 
@@ -65,20 +65,20 @@ const Stack = ({ techs }) => {
       <h2>Technologies</h2>
       <p>These are some of the technologies I enjoy working with.</p>
       <Technologies>
-        {/* {techs.map((item) => {
-          return (
-            <Circle key={item.id}>
-              <ImageContainer>
-                <StyledImage
-                  src={item.image.url}
-                  layout="fill"
-                  alt="An SVG of React.js"
-                  key={item.id}
-                />
-              </ImageContainer>
-            </Circle>
-          );
-        })} */}
+        <IconContext.Provider value={{ size: "100%", color: "white" }}>
+          <Circle>
+            <DiNodejsSmall />
+          </Circle>
+          <Circle>
+            <DiPython />
+          </Circle>
+          <Circle>
+            <DiReact />
+          </Circle>
+          <Circle>
+            <DiRust />
+          </Circle>
+        </IconContext.Provider>
       </Technologies>
     </Container>
   );

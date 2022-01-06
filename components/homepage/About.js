@@ -35,7 +35,7 @@ const AboutContainer = ({ description }) => {
   return (
     <Container>
       <Title>Welcome to my personal website.</Title>
-      {/* <Description>{description}</Description> */}
+      <Description>{description}</Description>
     </Container>
   );
 };
