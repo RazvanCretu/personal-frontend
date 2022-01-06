@@ -31,13 +31,13 @@ const Container = styled.div`
   padding-top: 2rem;
 `;
 
-const About = ({ description }) => {
+const AboutContainer = ({ description }) => {
   return (
-    <Container id="about">
+    <Container>
       <Title>Welcome to my personal website.</Title>
-      <Description>{description}</Description>
+      {/* <Description>{description}</Description> */}
     </Container>
   );
 };
 
-export default About;
+export default AboutContainer;

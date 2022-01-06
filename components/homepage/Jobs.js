@@ -58,7 +58,7 @@ const Jobs = ({ jobList }) => {
   return (
     <Container>
       <h2>Jobs</h2>
-      {jobList.map((item) => {
+      {/* {jobList.map((item) => {
         return (
           <Card key={item.startDate}>
             <Row>
@@ -81,7 +81,7 @@ const Jobs = ({ jobList }) => {
             </Row>
           </Card>
         );
-      })}
+      })} */}
     </Container>
   );
 };

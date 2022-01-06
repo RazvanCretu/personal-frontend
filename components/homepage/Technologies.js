@@ -65,7 +65,7 @@ const Stack = ({ techs }) => {
       <h2>Technologies</h2>
       <p>These are some of the technologies I enjoy working with.</p>
       <Technologies>
-        {techs.map((item) => {
+        {/* {techs.map((item) => {
           return (
             <Circle key={item.id}>
               <ImageContainer>
@@ -78,7 +78,7 @@ const Stack = ({ techs }) => {
               </ImageContainer>
             </Circle>
           );
-        })}
+        })} */}
       </Technologies>
     </Container>
   );
