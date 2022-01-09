@@ -23,27 +23,27 @@ const NavigationContainer = styled.div`
 `;
 
 const Navigation = styled.nav`
-  min-width: 400px;
-  min-height: 50px;
+  z-index: 2;
+
+  min-width: 500px;
+  min-height: 45px;
   padding: 0rem 0.7rem;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   background-color: gray;
-  border: solid 3px black;
+
+  border: solid 3px rgba(100, 100, 100, 1);
   border-radius: 50px;
 
-  z-index: 2;
-
   a {
-    padding: 0 0.3rem;
-
-    text-align: center;
-    line-height: 32px;
-    line-width: 50px;
+    padding: 0 0.5rem;
     border-radius: 50px;
+
+    line-height: 30px;
+    text-align: center;
   }
 
   a:hover,
@@ -53,36 +53,20 @@ const Navigation = styled.nav`
   }
 
   .active {
-    background-color: magenta;
+    background: #03a9f4;
   }
 
   @media ${device.tablet} {
     min-width: 90%;
-
-    a {
-      margin-left: 0.3rem;
-    }
   }
 `;
 
-const BackButton = styled.a`
-  left: 0;
-  margin-left: 2rem;
-`;
-
 const Navbar = ({ theme, toggleTheme }) => {
-  // const [theme, themeToggler ] = useDarkMode();
   const Router = useRouter();
 
   return (
     <NavigationContainer>
       <Navigation>
-        {/* {Router.pathname !== "/" && (
-          <Link href="/" passHref>
-            <BackButton>Back</BackButton>
-          </Link>
-        )} */}
-
         <StyledInput
           type="checkbox"
           onChange={toggleTheme}
