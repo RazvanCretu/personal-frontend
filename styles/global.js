@@ -10,12 +10,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    align-items: center;
     background: ${({ theme }) => theme.Global.body};
     color: ${({ theme }) => theme.Global.text};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   a {
@@ -25,7 +21,6 @@ export const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    transition: 0.5s;
   }
 
 `;

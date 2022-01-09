@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/global";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { useDarkMode } from "../hooks/useDarkMode";
-import Layout from "../components/Layout";
+import Layout from "../components/ui/Layout";
 
 function MyApp({ Component, pageProps }) {
   const [theme, themeToggler, mountedComponent] = useDarkMode();
@@ -13,12 +13,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <>
-        <GlobalStyles />
-        <Layout theme={theme} toggleTheme={themeToggler}>
-          <Component {...pageProps} />
-        </Layout>
-      </>
+      <GlobalStyles />
+      <Layout theme={theme} toggleTheme={themeToggler}>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
