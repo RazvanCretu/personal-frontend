@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/theme";
 
 const Title = styled.h1`
   margin: 0;
@@ -27,8 +28,18 @@ const Description = styled.p`
 `;
 
 const Container = styled.div`
-  // padding-top: 4rem;
   padding-top: 2rem;
+
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+  }
 `;
 
 const AboutContainer = ({ description }) => {
