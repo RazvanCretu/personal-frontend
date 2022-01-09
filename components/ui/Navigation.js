@@ -22,7 +22,7 @@ const NavigationContainer = styled.div`
 `;
 
 const Navigation = styled.nav`
-  min-width: 70%;
+  min-width: 400px;
   min-height: 50px;
   padding: 0rem 0.7rem;
 
@@ -38,10 +38,6 @@ const Navigation = styled.nav`
 
   a {
     margin-left: 2rem;
-
-    @media ${device.tablet} {
-      margin-left: 0.3rem;
-    }
   }
 
   a:hover,
@@ -52,6 +48,14 @@ const Navigation = styled.nav`
 
   .active {
     background-color: blue;
+  }
+
+  @media ${device.tablet} {
+    min-width: 200px;
+
+    a {
+      margin-left: 0.3rem;
+    }
   }
 `;
 
