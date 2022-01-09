@@ -9,17 +9,20 @@ import { useDarkMode } from "../../hooks/useDarkMode";
 
 const NavigationContainer = styled.div`
   position: fixed;
-  //   top: 0;
   width: 100vw;
   height: 70px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${device.tablet} {
+    bottom: 0;
+  }
 `;
 
 const Navigation = styled.nav`
-  min-width: 400px;
+  min-width: 70%;
   min-height: 50px;
   padding: 0rem 0.7rem;
 
@@ -35,17 +38,16 @@ const Navigation = styled.nav`
 
   a {
     margin-left: 2rem;
+
+    @media ${device.tablet} {
+      margin-left: 0.3rem;
+    }
   }
 
   a:hover,
   a:focus,
   a:active {
     text-decoration: none;
-  }
-
-  @media ${device.tablet} {
-    bottom: 0;
-    padding: 0 0.7rem 1rem 0.7rem;
   }
 
   .active {
