@@ -15,6 +15,7 @@ const NavigationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
   @media ${device.tablet} {
     bottom: 0;
@@ -37,7 +38,12 @@ const Navigation = styled.nav`
   z-index: 2;
 
   a {
-    margin-left: 2rem;
+    padding: 0 0.3rem;
+
+    text-align: center;
+    line-height: 32px;
+    line-width: 50px;
+    border-radius: 50px;
   }
 
   a:hover,
@@ -47,11 +53,11 @@ const Navigation = styled.nav`
   }
 
   .active {
-    background-color: blue;
+    background-color: magenta;
   }
 
   @media ${device.tablet} {
-    min-width: 200px;
+    min-width: 90%;
 
     a {
       margin-left: 0.3rem;
@@ -71,11 +77,11 @@ const Navbar = ({ theme, toggleTheme }) => {
   return (
     <NavigationContainer>
       <Navigation>
-        {Router.pathname !== "/" && (
+        {/* {Router.pathname !== "/" && (
           <Link href="/" passHref>
             <BackButton>Back</BackButton>
           </Link>
-        )}
+        )} */}
 
         <StyledInput
           type="checkbox"
@@ -83,15 +89,19 @@ const Navbar = ({ theme, toggleTheme }) => {
           checked={theme !== "light"}
         />
 
-        <Link href="projects" passHref>
+        <Link href="/" passHref>
+          <a className={Router.pathname === "/" ? "active" : ""}>Home</a>
+        </Link>
+
+        <Link href="/projects" passHref>
           <a className={Router.pathname === "/projects" ? "active" : ""}>
             Projects
           </a>
         </Link>
-        <Link href="about" passHref>
+        <Link href="/about" passHref>
           <a className={Router.pathname === "/about" ? "active" : ""}>About</a>
         </Link>
-        <Link href="contact" passHref>
+        <Link href="/contact" passHref>
           <a className={Router.pathname === "/contact" ? "active" : ""}>
             Contact
           </a>
