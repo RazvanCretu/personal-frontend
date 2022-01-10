@@ -2,7 +2,13 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { IconContext } from "react-icons";
-import { DiNodejsSmall, DiPython, DiReact, DiRust } from "react-icons/di";
+import {
+  DiNodejsSmall,
+  DiPython,
+  DiReact,
+  DiRust,
+  DiMysql,
+} from "react-icons/di";
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +17,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 2rem;
+  height: 420px;
 
   p {
     padding: 0 0.5rem;
@@ -26,6 +32,7 @@ const Technologies = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  height: 138px;
 `;
 
 const Circle = styled.span`
@@ -38,24 +45,12 @@ const Circle = styled.span`
   padding: 0.5rem;
   border-radius: 50%;
 
+  transition: 0.69s;
+
   &:hover {
     box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 0.3);
     height: 6rem;
     width: 6rem;
-  }
-`;
-
-const ImageContainer = styled.span`
-  position: relative;
-  height: 42px;
-  width: 42px;
-`;
-
-const StyledImage = styled(Image)`
-  div {
-    position: relative;
-    width: 52px;
-    height: 52px;
   }
 `;
 
@@ -67,13 +62,16 @@ const Stack = ({ techs }) => {
       <Technologies>
         <IconContext.Provider value={{ size: "100%", color: "white" }}>
           <Circle>
-            <DiNodejsSmall />
-          </Circle>
-          <Circle>
             <DiPython />
           </Circle>
           <Circle>
             <DiReact />
+          </Circle>
+          <Circle>
+            <DiNodejsSmall />
+          </Circle>
+          <Circle>
+            <DiMysql />
           </Circle>
           <Circle>
             <DiRust />

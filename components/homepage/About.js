@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { device } from "../../styles/theme";
 
+import Typist from "react-typist";
+
 const Title = styled.h1`
   margin: 0;
   line-height: 1;
@@ -28,14 +30,15 @@ const Description = styled.p`
 `;
 
 const Container = styled.div`
-  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 420px;
+  width: 100vw;
 
   @media ${device.tablet} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     height: 100vh;
     width: 100vw;
     padding: 0;
@@ -45,8 +48,10 @@ const Container = styled.div`
 const AboutContainer = ({ description }) => {
   return (
     <Container>
-      <Title>Welcome to my personal website.</Title>
-      <Description>{description}</Description>
+      <Typist avgTypingDelay={100} cursor={{ show: false }}>
+        <Title>Welcome to my personal website.</Title>
+        <Description>{description}</Description>
+      </Typist>
     </Container>
   );
 };

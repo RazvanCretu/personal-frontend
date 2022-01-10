@@ -5,6 +5,9 @@ import { lightTheme, darkTheme } from "../styles/theme";
 import { useDarkMode } from "../hooks/useDarkMode";
 import Layout from "../components/ui/Layout";
 
+import "react-typist/dist/Typist.css";
+import "react-typist/dist/standalone/Typist.js";
+
 function MyApp({ Component, pageProps }) {
   const [theme, themeToggler, mountedComponent] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
