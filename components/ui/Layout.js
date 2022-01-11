@@ -10,12 +10,6 @@ const PagesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  padding: 3rem 0 0 0;
-
-  @media ${device.tablet} {
-    padding: 0;
-  }
 `;
 
 const Layout = ({ children, theme, toggleTheme }) => {

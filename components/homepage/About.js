@@ -3,6 +3,21 @@ import { device } from "../../styles/theme";
 
 import Typist from "react-typist";
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 420px;
+  width: 100vw;
+
+  @media ${device.tablet} {
+    height: 100vh;
+    width: 100vw;
+  }
+`;
+
 const Title = styled.h1`
   margin: 0;
   line-height: 1;
@@ -29,23 +44,7 @@ const Description = styled.p`
   color: ${({ theme }) => theme.About.paragraph};
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  height: 420px;
-  width: 100vw;
-
-  @media ${device.tablet} {
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-  }
-`;
-
-const AboutContainer = ({ description }) => {
+const About = ({ description }) => {
   return (
     <Container>
       <Typist avgTypingDelay={100} cursor={{ show: false }}>
@@ -56,4 +55,4 @@ const AboutContainer = ({ description }) => {
   );
 };
 
-export default AboutContainer;
+export default About;
