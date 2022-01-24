@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
 
   height: 420px;
-  width: 100vw;
+  width: 100%;
 
   @media ${device.tablet} {
     height: 100vh;

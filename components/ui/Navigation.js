@@ -23,7 +23,7 @@ const NavigationContainer = styled.div`
 `;
 
 const Navigation = styled.nav`
-  z-index: 2;
+  z-index: 200;
 
   min-width: 500px;
   min-height: 45px;
@@ -76,7 +76,9 @@ const Navbar = ({ theme, toggleTheme }) => {
         <Link href="/" passHref>
           <a className={Router.pathname === "/" ? "active" : ""}>Home</a>
         </Link>
-
+        <Link href="/blog" passHref>
+          <a className={Router.pathname === "/blog" ? "active" : ""}>Blog</a>
+        </Link>
         <Link href="/projects" passHref>
           <a className={Router.pathname === "/projects" ? "active" : ""}>
             Projects

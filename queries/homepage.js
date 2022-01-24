@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 const HOME = gql`
-  query Home {
+  query Homepage {
     homepage {
       data {
         attributes {
@@ -11,6 +11,16 @@ const HOME = gql`
         }
       }
     }
+    posts(sort: "createdAt:desc", pagination: { limit: 3 }) {
+      data {
+        attributes {
+          title
+          slug
+          publishedAt
+        }
+      }
+    }
   }
 `;
+
 export default HOME;

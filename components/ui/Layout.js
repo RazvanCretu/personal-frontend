@@ -8,6 +8,7 @@ const PagesContainer = styled.div`
   height: 100%;
 
   display: flex;
+  flex-flow: column;
   flex-wrap: wrap;
   justify-content: center;
 `;

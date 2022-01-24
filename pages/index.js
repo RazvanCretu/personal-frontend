@@ -8,6 +8,7 @@ import HOME from "../queries/homepage";
 import Stack from "../components/homepage/Technologies";
 import Jobs from "../components/homepage/Jobs";
 import About from "../components/homepage/About";
+import Posts from "../components/homepage/Posts";
 
 const Container = styled.div`
   width: 100%;
@@ -39,10 +40,10 @@ const Container = styled.div`
 }
 `;
 
-export default function Home({ home }) {
+export default function Home({ homepage, posts }) {
   const {
     About: { description },
-  } = home.homepage.data.attributes;
+  } = homepage.data.attributes;
 
   return (
     <>
@@ -54,9 +55,8 @@ export default function Home({ home }) {
 
       <About description={description} />
       <Stack techs="" />
+      <Posts postList={posts.data} />
       <Jobs jobList="" />
-
-      <div></div>
     </>
   );
 }
@@ -67,9 +67,7 @@ export async function getStaticProps(ctx) {
   });
 
   return {
-    props: {
-      home: data,
-    },
+    props: data,
     revalidate: 1,
   };
 }
