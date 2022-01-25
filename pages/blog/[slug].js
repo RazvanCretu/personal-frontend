@@ -52,6 +52,8 @@ const Content = styled.div`
   }
 
   p {
+    text-indent: 3ch;
+
     code {
       border-radius: 3px;
       background: #03a9f4;
@@ -76,6 +78,10 @@ const Content = styled.div`
     justify-content: center;
     align-items: center;
     flex-flow: column;
+
+    p {
+      text-indent: unset;
+    }
   }
 `;
 
