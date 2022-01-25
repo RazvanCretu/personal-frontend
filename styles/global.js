@@ -14,6 +14,14 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.Global.text};
   }
 
+  ul {
+    padding: unset;
+     
+    li {
+      list-style: none;
+    }
+  }
+
   a {
     color: inherit;
     text-decoration: none;

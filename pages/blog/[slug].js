@@ -13,13 +13,18 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import styled from "styled-components";
+import { device } from "../../styles/theme";
 
-const PostContainer = styled.div`
+const Container = styled.div`
   width: 100%;
   padding: 5rem 25rem;
+
+  @media ${device.tablet} {
+    padding: 0rem 1rem 4rem 1rem;
+  }
 `;
 
-const PostHeader = styled.div`
+const Header = styled.div`
   width: 100%;
 
   display: flex;
@@ -29,17 +34,21 @@ const PostHeader = styled.div`
 
   h1 {
     font-size: 56px;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.15rem;
+  }
+
+  @media ${device.tablet} {
+    h1 {
+      font-size: 46px;
+    }
   }
 `;
 
-const PostContent = styled.div`
+const Content = styled.div`
   margin: 2rem 0 0 0;
 
-  h1,
-  h2,
-  h3 {
-    margin-left: 2rem;
+  h1 {
+    margin: 1em 0;
   }
 
   p {
@@ -56,7 +65,7 @@ const PostContent = styled.div`
     align-items: center;
 
     div {
-      width: 70%;
+      width: 90%;
       border-radius: 10px;
       position: unset !important;
     }
@@ -109,12 +118,12 @@ const Blockquote = ({ node, children, ...props }) => {
 const PostPage = ({ posts }) => {
   const { title, publishedAt, content } = posts.data[0]?.attributes;
   return (
-    <PostContainer>
-      <PostHeader>
+    <Container>
+      <Header>
         <h1>{title}</h1>
         <h4>{new Date(publishedAt).toDateString()}</h4>
-      </PostHeader>
-      <PostContent>
+      </Header>
+      <Content>
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]}
           rehypePlugins={[rehypeKatex, rehypeRaw]}
@@ -128,8 +137,8 @@ const PostPage = ({ posts }) => {
         >
           {content}
         </ReactMarkdown>
-      </PostContent>
-    </PostContainer>
+      </Content>
+    </Container>
   );
 };
 
