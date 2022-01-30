@@ -86,9 +86,33 @@ const Content = styled.div`
 `;
 
 const BlockquoteContainer = styled.blockquote`
-  background: rgba(100, 100, 100, 1);
-  border-left: 0.35rem solid rgba(27, 196, 184, 1);
-  padding: 1rem;
+  position: relative;
+  margin: 0 7rem;
+  border-radius: 10px;
+  background: rgb(47, 47, 47);
+  color: rgb(150, 150, 150);
+  overflow: hidden;
+
+  z-index: -1;
+
+  p{
+    margin: 2rem 0;
+  }
+
+  ::before {
+    position: absolute;
+    content: " ";
+    width: 0.5rem;
+    height: 100%;
+    background-color: rgb(150, 150, 150);
+  }
+
+  cite {
+    position: absolute;
+    right: 0px;
+    margin-right: 5rem;
+}
+  }
 `;
 
 const StyledLink = styled.a`

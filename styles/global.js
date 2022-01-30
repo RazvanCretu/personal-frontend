@@ -9,6 +9,10 @@ export const GlobalStyles = createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
   }
 
+  table {
+    margin: auto;
+  }
+
   body {
     background: ${({ theme }) => theme.Global.body};
     color: ${({ theme }) => theme.Global.text};
