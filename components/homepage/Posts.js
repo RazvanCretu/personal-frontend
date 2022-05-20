@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const Container = styled.div`
   width: 100%;
+  margin-top: 10rem;
 
   display: flex;
   justify-content: center;
@@ -13,14 +14,17 @@ const Container = styled.div`
 const List = styled.ul`
   display: flex;
   flex-flow: column;
-  margin-top: 5rem;
+  margin-top: 3rem;
 
   li {
     list-style: none;
-    // width: 800px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    h4 {
+      letter-spacing: 0.05rem;
+    }
   }
 
   a:hover {
@@ -46,9 +50,7 @@ const Posts = ({ postList }) => {
                     {item.attributes.title}
                   </Link>
                 </h4>
-                <h4>
-                  {new Date(item.attributes.publishedAt).toLocaleString()}
-                </h4>
+                <h4>{new Date(item.attributes.publishedAt).toDateString()}</h4>
               </li>
             );
           })}

@@ -41,9 +41,7 @@ const Container = styled.div`
 `;
 
 export default function Home({ homepage, posts }) {
-  const {
-    About: { description },
-  } = homepage.data.attributes;
+  const { description } = homepage.data.attributes;
 
   return (
     <>

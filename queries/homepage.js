@@ -5,8 +5,12 @@ const HOME = gql`
     homepage {
       data {
         attributes {
-          About {
-            description
+          first_name
+          last_name
+          description
+          holdings {
+            name
+            address
           }
         }
       }
